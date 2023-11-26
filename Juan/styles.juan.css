@@ -1,0 +1,23 @@
+:root{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins',sans-serif; 
+}
+
+.link_navegacao{
+    
+}
+
+
+
+.container_titulo {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
