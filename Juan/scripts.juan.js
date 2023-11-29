@@ -57,8 +57,13 @@ function generateElementos(vetorDePokemons, vetorDeElementos) {
 		cardTitle.innerHTML = nomeDoPokemon
 
 		let cardText = document.createElement('p')
-		cardText.innerHTML = '<b>Id do pokemon:</b> ' + vetorDePokemons[i].id + '<br><b>Altura:</b> ' + vetorDePokemons[i].height + '<br><b>Peso:</b> ' + vetorDePokemons[i].weight
-
+		cardText.innerHTML =
+			'<br><b>Id do pokemon:</b> ' + vetorDePokemons[i].id + '<br><b>Altura:</b> ' + (vetorDePokemons[i].height / 10).toFixed(1) + ' m<br><b>Peso:</b> ' + (vetorDePokemons[i].weight / 10).toFixed(1) + ' kg'
+		let tipos = '<b>Tipo:</b> '
+		vetorDePokemons[i].types.forEach((tipo) => {
+			tipos += tipo.type.name + ' '
+		})
+		cardText.innerHTML = tipos + cardText.innerHTML 
 		cardBody.appendChild(cardTitle)
 		cardBody.appendChild(cardText)
 		card.appendChild(cardImg)
@@ -77,15 +82,15 @@ function generateSpinner() {
 }
 
 function removeSpinner() {
-    let spinnerContainer = document.querySelector('#spinnerContainer')
-    spinnerContainer.removeChild(spinnerContainer.lastElementChild)
+	let spinnerContainer = document.querySelector('#spinnerContainer')
+	spinnerContainer.removeChild(spinnerContainer.lastElementChild)
 }
 
 let botaoGerarPokemons = document.querySelector('#botaoGerarPokemons')
 
 botaoGerarPokemons.addEventListener('click', async (event) => {
 	generateSpinner()
-    let elemento = document.querySelector('section')
+	let elemento = document.querySelector('section')
 	let vetorDePokemons = []
 	let vetorDeElementos = []
 
@@ -96,5 +101,5 @@ botaoGerarPokemons.addEventListener('click', async (event) => {
 	vetorDeElementos.forEach((card) => {
 		elemento.appendChild(card)
 	})
-    removeSpinner()
+	removeSpinner()
 })
