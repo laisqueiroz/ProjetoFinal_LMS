@@ -29,6 +29,7 @@ async function fetchPokemons(vetorDePokemons) {
 			vetorDePokemons.push(await novoPokemon.json())
 		}
 	}
+	console.log(vetorDePokemons)
 }
 
 function generateElementos(vetorDePokemons, vetorDeElementos) {
