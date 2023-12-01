@@ -47,6 +47,21 @@ a:hover {
     font-weight: 500;
 }
 
+.navbarLogoContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.linksListContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .link-navegacao {
     color: white;
     font-size: 1rem;

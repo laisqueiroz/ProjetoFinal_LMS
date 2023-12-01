@@ -9,6 +9,7 @@ body {
 a {
     text-decoration: none !important;
     color: #0056b3;
+    text-align: center;
 }
 
 .pageContainer {
@@ -57,6 +58,13 @@ a {
     font-size: 1.2rem;
     transition: color 0.5s;
     font-weight: 500;
+}
+
+.linksListContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    width: 100%;
 }
 
 .linkNavegacao {
