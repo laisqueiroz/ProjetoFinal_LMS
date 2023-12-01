@@ -1,0 +1,167 @@
+:root {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: rgb(133, 153, 191) !important;
+}
+
+.navbar {
+    height: 7vh !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    width: 100%;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-projeto {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    transition: color 0.5s;
+    font-weight: 500;
+}
+
+.link-navegacao {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 1s;
+    text-transform: capitalize;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0px 15px;
+    color: white;
+    width: 40%;
+    text-align: flex-end;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #585858;
+    color: black;
+    padding: 5px;
+    z-index: 1;
+    width: 140px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 93vh;
+    width: 100vw;
+    padding: 2.5% 2%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(0deg, rgb(133, 153, 191), rgb(67, 80, 104))
+}
+
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+
+.container-card {
+    width: 19% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-card {
+        width: 35% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100% !important;
+    }
+    
+}
+
+.card-principal {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.card-principal:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.card-info {
+    opacity: 0;
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+    transition: opacity 1s;
+}
+
+.card-info-ativado {
+    opacity: 1 !important
+}
+
+.card-img-top {
+    width: 100%;
+}
