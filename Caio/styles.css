@@ -1,0 +1,712 @@
+:root {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: red !important;
+}
+
+.navbar {
+    height: 7vh !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    width: 100%;
+}
+
+.navbarLogoContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.navbarLogo {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    transition: color 0.5s;
+    font-weight: 500;
+}
+.linkNavegacao {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 1s;
+    text-transform: capitalize;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0px 15px;
+    color: white;
+    width: 40%;
+    text-align: flex-end;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #585858;
+    color: black;
+    padding: 5px;
+    z-index: 1;
+    width: 140px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 93vh;
+    width: 100vw;
+    padding: 2.5% 2.5%;
+    background-color: rgb(157, 197, 163);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+@media (max-width: 1160px) {
+    .article {
+        flex-direction: column;
+    }
+}
+
+.grimoire-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    text-align: center;
+    width: 40%;
+}
+
+.grimoire-section p {
+    width: 50%;
+}
+
+.grimoire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6bc95;
+    padding: 1%;
+    width: 80%;
+    text-align: center;
+}
+
+.grimoire>p {
+    font-weight: bold;
+    width: 100%;
+}
+
+.grimoire ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+}
+
+.grimoire ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.grimoire ul li p {
+    width: 100%;
+}
+
+.magic-text {
+    animation-name: magic-text-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    margin-bottom: 0.5rem;
+    font-size: x-large;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Caesar Dressing', cursive;
+}
+
+@keyframes magic-text-animation {
+    0% {
+        color: black;
+    }
+
+    55% {
+        color: black;
+    }
+
+    60% {
+        color: #eba641
+    }
+
+    70% {
+        color: #e38e33;
+    }
+
+    80% {
+        color: #660b09;
+    }
+
+    85% {
+        color: black;
+    }
+
+    100% {
+        color: black;
+    }
+
+}
+
+.magic-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circle {
+    width: 0px;
+    height: 0px;
+    background-color: red;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    color: red;
+    z-index: 2;
+}
+
+#gif {
+    width: 0;
+    height: auto;
+    z-index: 3
+}
+
+#circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 300px;
+    height: 300px
+}
+
+@media (max-width: 1160px) {
+    #circle {
+        top: -100%;
+        left: -100%;
+        right: -99%;
+        bottom: -95%;
+        margin: auto;
+    }
+
+    #gif {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        right: -99%;
+        bottom: -95%;
+        margin: auto;
+    }
+
+    #input-div {
+        margin-top: 2rem;
+    }
+}
+
+.centered-content {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    margin: auto;
+}
+
+.flam {
+    animation-name: spell-little;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    visibility: visible !important;
+}
+
+.flam-hur {
+    animation-name: spell-normal;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: visible !important;
+}
+
+.gran-flam-hur {
+    animation-name: spell-great;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: visible !important;
+}
+
+.gran-mas-flam {
+    animation-name: spell-enormous;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: visible !important;
+}
+
+@keyframes spell-little {
+    0% {
+        border-radius: 100%;
+        width: 0px;
+        height: 0px;
+        background-color: none;
+    }
+
+    15% {
+        border-radius: 100%;
+        background-color: #eba641;
+    }
+
+    25% {
+        border-radius: 100%;
+        background-color: #e38e33;
+    }
+
+    30% {
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+        background-color: #660b09;
+    }
+
+    85% {
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        background-color: #2018008f;
+    }
+
+    100% {
+        border-radius: 100%;
+        background-color: #2018008f;
+        width: 0px;
+        height: 0px;
+        background-image: "images/grid.png";
+    }
+}
+
+@keyframes spell-normal {
+    0% {
+        border-radius: 100%;
+        width: 0px;
+        height: 0px;
+        background-color: none;
+    }
+
+    15% {
+        border-radius: 100%;
+        background-color: #eba641;
+    }
+
+    25% {
+        border-radius: 100%;
+        background-color: #e38e33;
+    }
+
+    30% {
+        border-radius: 100%;
+        width: 500px;
+        height: 500px;
+        background-color: #660b09;
+    }
+
+    85% {
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+        background-color: #2018008f;
+    }
+
+    100% {
+        border-radius: 100%;
+        background-color: #2018008f;
+        width: 0px;
+        height: 0px;
+        background-image: "images/grid.png";
+    }
+}
+
+@keyframes spell-great {
+    0% {
+        border-radius: 100%;
+        width: 0px;
+        height: 0px;
+        background-color: none;
+    }
+
+    15% {
+        border-radius: 100%;
+        background-color: #eba641;
+    }
+
+    25% {
+        border-radius: 100%;
+        background-color: #e38e33;
+    }
+
+    30% {
+        border-radius: 100%;
+        width: 700px;
+        height: 700px;
+        background-color: #660b09;
+    }
+
+    85% {
+        border-radius: 100%;
+        width: 500px;
+        height: 500px;
+        background-color: #2018008f;
+    }
+
+    100% {
+        border-radius: 100%;
+        background-color: #2018008f;
+        width: 0px;
+        height: 0px;
+        background-image: "images/grid.png";
+    }
+}
+
+@keyframes spell-enormous {
+    0% {
+        border-radius: 100%;
+        width: 0px;
+        height: 0px;
+        background-color: none;
+    }
+
+    15% {
+        border-radius: 100%;
+        background-color: #eba641;
+    }
+
+    25% {
+        border-radius: 100%;
+        background-color: #e38e33;
+    }
+
+    30% {
+        border-radius: 100%;
+        width: 900px;
+        height: 900px;
+        background-color: #660b09;
+    }
+
+    85% {
+        border-radius: 100%;
+        width: 500px;
+        height: 500px;
+        background-color: #2018008f;
+    }
+
+    100% {
+        border-radius: 100%;
+        background-color: #2018008f;
+        width: 0px;
+        height: 0px;
+        background-image: "images/grid.png";
+    }
+}
+
+@keyframes spell-enormous {
+    0% {
+        border-radius: 100%;
+        width: 0px;
+        height: 0px;
+        background-color: none;
+    }
+
+    15% {
+        border-radius: 100%;
+        background-color: #eba641;
+    }
+
+    25% {
+        border-radius: 100%;
+        background-color: #e38e33;
+    }
+
+    30% {
+        border-radius: 100%;
+        width: 900px;
+        height: 900px;
+        background-color: #660b09;
+    }
+
+    85% {
+        border-radius: 100%;
+        width: 500px;
+        height: 500px;
+        background-color: #2018008f;
+    }
+
+    100% {
+        border-radius: 100%;
+        background-color: #2018008f;
+        width: 0px;
+        height: 0px;
+        background-image: "images/grid.png";
+    }
+}
+
+@media (min-width: 1600px) {
+    @keyframes spell-little {
+        0% {
+            border-radius: 100%;
+            width: 0px;
+            height: 0px;
+            background-color: none;
+        }
+
+        15% {
+            border-radius: 100%;
+            background-color: #eba641;
+        }
+
+        25% {
+            border-radius: 100%;
+            background-color: #e38e33;
+        }
+
+        30% {
+            border-radius: 100%;
+            width: 600px;
+            height: 600px;
+            background-color: #660b09;
+        }
+
+        85% {
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            background-color: #2018008f;
+        }
+
+        100% {
+            border-radius: 100%;
+            background-color: #2018008f;
+            width: 0px;
+            height: 0px;
+            background-image: "images/grid.png";
+        }
+    }
+
+    @keyframes spell-normal {
+        0% {
+            border-radius: 100%;
+            width: 0px;
+            height: 0px;
+            background-color: none;
+        }
+
+        15% {
+            border-radius: 100%;
+            background-color: #eba641;
+        }
+
+        25% {
+            border-radius: 100%;
+            background-color: #e38e33;
+        }
+
+        30% {
+            border-radius: 100%;
+            width: 700px;
+            height: 700px;
+            background-color: #660b09;
+        }
+
+        85% {
+            border-radius: 100%;
+            width: 500px;
+            height: 500px;
+            background-color: #2018008f;
+        }
+
+        100% {
+            border-radius: 100%;
+            background-color: #2018008f;
+            width: 0px;
+            height: 0px;
+            background-image: "images/grid.png";
+        }
+    }
+
+    @keyframes spell-great {
+        0% {
+            border-radius: 100%;
+            width: 0px;
+            height: 0px;
+            background-color: none;
+        }
+
+        15% {
+            border-radius: 100%;
+            background-color: #eba641;
+        }
+
+        25% {
+            border-radius: 100%;
+            background-color: #e38e33;
+        }
+
+        30% {
+            border-radius: 100%;
+            width: 1000px;
+            height: 1000px;
+            background-color: #660b09;
+        }
+
+        85% {
+            border-radius: 100%;
+            width: 700px;
+            height: 700px;
+            background-color: #2018008f;
+        }
+
+        100% {
+            border-radius: 100%;
+            background-color: #2018008f;
+            width: 0px;
+            height: 0px;
+            background-image: "images/grid.png";
+        }
+    }
+
+    @keyframes spell-enormous {
+        0% {
+            border-radius: 100%;
+            width: 0px;
+            height: 0px;
+            background-color: none;
+        }
+
+        15% {
+            border-radius: 100%;
+            background-color: #eba641;
+        }
+
+        25% {
+            border-radius: 100%;
+            background-color: #e38e33;
+        }
+
+        30% {
+            border-radius: 100%;
+            width: 1200px;
+            height: 1200px;
+            background-color: #660b09;
+        }
+
+        85% {
+            border-radius: 100%;
+            width: 700px;
+            height: 700px;
+            background-color: #2018008f;
+        }
+
+        100% {
+            border-radius: 100%;
+            background-color: #2018008f;
+            width: 0px;
+            height: 0px;
+            background-image: "images/grid.png";
+        }
+    }
+
+    @keyframes spell-enormous {
+        0% {
+            border-radius: 100%;
+            width: 0px;
+            height: 0px;
+            background-color: none;
+        }
+
+        15% {
+            border-radius: 100%;
+            background-color: #eba641;
+        }
+
+        25% {
+            border-radius: 100%;
+            background-color: #e38e33;
+        }
+
+        30% {
+            border-radius: 100%;
+            width: 1500px;
+            height: 1500px;
+            background-color: #660b09;
+        }
+
+        85% {
+            border-radius: 100%;
+            width: 900px;
+            height: 900px;
+            background-color: #2018008f;
+        }
+
+        100% {
+            border-radius: 100%;
+            background-color: #2018008f;
+            width: 0px;
+            height: 0px;
+            background-image: "images/grid.png";
+        }
+    }
+}
