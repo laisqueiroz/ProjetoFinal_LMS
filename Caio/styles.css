@@ -46,6 +46,14 @@ a:hover {
     transition: color 0.5s;
     font-weight: 500;
 }
+
+.linksListContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    width: 100%;
+}
+
 .linkNavegacao {
     color: white;
     font-size: 1rem;
@@ -79,6 +87,15 @@ a:hover {
 
 .dropdown:hover .dropdown-content {
     display: flex;
+}
+.dropdown-name {
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.dropdown-name:hover {
+    cursor: pointer;
+    color: red ;
 }
 
 .content {
