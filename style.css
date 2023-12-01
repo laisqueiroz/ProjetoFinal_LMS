@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header{
+header {
     height: 40px;
     padding: 10px 30px;
     background-color: black;
@@ -20,10 +20,16 @@ header{
     justify-content: flex-end;
     align-items: center;
 }
-a{
+
+a {
     text-decoration: none;
     margin: 0px 15px;
     color: white;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #5a86b5;
 }
 
 .dropdown {
@@ -32,7 +38,7 @@ a{
     margin: 0px 15px;
     color: white;
 }
-  
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -49,7 +55,17 @@ a{
     display: block;
 }
 
-body{
+.dropdown-name {
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.dropdown-name:hover {
+    cursor: pointer;
+    color: #5a86b5;
+}
+
+body {
     width: 100%;
     height: 100%;
     display: flex;
@@ -58,19 +74,20 @@ body{
     align-content: space-between;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.apresentacao-equipe{
+
+.apresentacao-equipe {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.membro{
+.membro {
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -83,9 +100,7 @@ footer{
     box-shadow: 3px 2px #585858;
 }
 
-.membro:hover{
-
-}
+.membro:hover {}
 
 form {
     margin: 20px;

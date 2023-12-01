@@ -80,6 +80,15 @@ a:hover {
 .dropdown:hover .dropdown-content {
     display: flex;
 }
+.dropdown-name {
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.dropdown-name:hover {
+    cursor: pointer;
+    color: red ;
+}
 
 .content {
     display: flex;
